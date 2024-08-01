@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<h1 class="alert alert-primary text-center "> Edit Service Provider's Details</h1>
+  <div class="text-start d-flex justify-content-center align-items-center vh-100">
+      <form action="" method="POST" class="w-50">
+          {% csrf_token %}
+          {{form}}
+          
+          <button  type="submit" class="btn btn-primary mt-4">Save</button>
+          <button  type="reset" class="btn btn-danger mt-4">Reset</button>
+          <a href="{% url 'add_invoice1' %}" type="button" class="btn btn-primary mt-4">Add invoice</a>
+      </form>
+  </div>
+{% endblock body %}

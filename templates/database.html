@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="background">
+
+<div style="padding: 20px;">
+  <h1 style="text-align: center; color: #333;">Welcome to Your Dashboard</h1>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+      <div class="card text-center m-6" style="width: 18rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="{% static 'images/new_bill.png' %}" class="card-img-top" alt="Bill Image">
+          <div class="card-body">  
+            <a href="{% url 'add_invoice1' %}" class="btn btn-primary">Add Invoice</a>
+          </div>
+      </div>
+      <div class="card text-center m-6" style="width: 18rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="{% static 'images/service_n.png' %}" class="card-img-top" alt="Bill Image">
+          <div class="card-body">
+              <a href="{% url 'add_provider' %}" class="btn btn-primary">Service provider</a>
+          </div>
+      </div>
+      <div class="card text-center m-6" style="width: 18rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="{% static 'images/review2.png' %}" class="card-img-top" alt="Bill Image">
+          <div class="card-body">
+              <a href="{% url 'allList' %}" class="btn btn-primary">Review invoice</a>
+          </div>
+      </div>
+      <div class="card text-center m-6" style="width: 18rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="{% static 'images/bill.png' %}" class="card-img-top" alt="Bill Image">
+          <div class="card-body">
+              <a href="{% url "report_list" %}" class="btn btn-primary">Bill Report</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+{% endblock body %}

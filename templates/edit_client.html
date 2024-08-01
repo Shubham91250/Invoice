@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit Client{% endblock title %}
+
+
+{% block body %}
+<div class="text-start mt-4 mx-4">
+    <a href="{% url 'allList' %}" class="btn btn-secondary" type="button">Go Back</a>
+  
+</div>
+
+<h1 class="alert alert-primary text-center mt-4"> Edit Client's Details</h1>
+<div class="text-start d-flex justify-content-center  align-items-center">
+    <form action="" method="POST" class="w-50">
+        {% csrf_token %}
+        {{fm}}
+        
+        <button  type="submit" class="btn btn-primary mt-4">Save</button>
+        <button  type="reset" class="btn btn-danger mt-4">Reset</button>
+    </form>
+</div>
+
+
+
+{% endblock body %}
